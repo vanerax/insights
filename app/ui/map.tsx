@@ -2,9 +2,11 @@
  
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import { useState } from 'react'
  
 export function Map() {
   const pathname = usePathname()
+  const [count, setCount] = useState(0);
  
   return (
     <section>
@@ -29,6 +31,7 @@ export function Map() {
               <Link href="/location/3">loc 3</Link>
             </li>
         </ul>
+        
     </section>
   )
 }

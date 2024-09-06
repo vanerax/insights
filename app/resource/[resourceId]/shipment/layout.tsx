@@ -11,10 +11,9 @@ export default function RootLayout({
     params: { id: string, shipId: string }
 }) {
     const router = useRouter()
-    console.log("shipId: ", params.shipId);
     return (
-        <div>            
-            <article>{children}</article>
-        </div>
+        <>            
+            {children}
+        </>
     )
 }

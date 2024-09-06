@@ -1,25 +1,23 @@
 import { NavLinks } from './ui/nav-links'
 import './global.css'
-import {Map} from './ui/map'
+import { VisualReport } from './ui/visual-report'
 
 export default function RootLayout({
-    children, 
-    map2: map
+    children,
 }: {
-    children: React.ReactNode,
-    map2: React.ReactNode
+    children: React.ReactNode
 }) {
     return (
-      <html lang="en">
-        <body>
-          <NavLinks/>
-          {/* Layout UI */}
-          <main>
-            <Map></Map>
-            {/* {map} */}
-            {children}
-          </main>
-        </body>
-      </html>
+        <html lang="en">
+            <body>
+                <NavLinks/>
+                {/* Layout UI */}
+                <main>
+                    <VisualReport>
+                        {children}
+                    </VisualReport>
+                </main>
+            </body>
+        </html>
     )
 }

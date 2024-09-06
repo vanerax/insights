@@ -10,14 +10,8 @@ export default function RootLayout({
 }) {
     const router = useRouter()
     return (
-        <div>
-            <h2>
-                <span>Resource Section</span>
-                {/* <Link href="..">up</Link> */}
-                <button type="button" onClick={() => router.push("..")}>close</button>
-            </h2>
-            
-            <article>{children}</article>
-        </div>
+        <>
+            {children}
+        </>
     )
 }
